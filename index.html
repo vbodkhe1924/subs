@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM PROJECTS</title>
+    <style>
+        body{
+            background-color: black;
+        }
+
+         p{
+            font-family: Arial, Helvetica, sans-serif;
+            color: azure;
+           
+        }
+        
+        /*button{
+            text-align: center;
+        } */
+        .subscribe-button{
+            
+            border:none;
+            background-color: crimson;
+            color:black;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            padding-left: 10px;
+            font-weight: bolder;
+            border-radius: 40px;
+            cursor: pointer;
+            
+
+        }
+        .is-subscribed{
+            background-color: rgb(188, 188, 188);
+            color: black;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <p>Youtube subscribe button</p>
+    <button onclick="
+    subscribe();
+    "class="js-subscribe subscribe-button">SUBSCRIBE</button>
+    <script>
+        function subscribe(){
+            const buttonElement=document.querySelector('.js-subscribe');
+
+        if(buttonElement.innerHTML==='SUBSCRIBE'){
+        buttonElement.innerHTML='SUBSCRIBED';
+        buttonElement.classList.add('is-subscribed');//.classList.add adds a class to js code which can be used to style 
+        }
+        else{
+            buttonElement.innerHTML='SUBSCRIBE';
+            buttonElement.classList.remove('is-subscribed');
+        }
+        }
+    </script>
+    
+</body>
+</html>
